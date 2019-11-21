@@ -1,5 +1,5 @@
 FROM alpine
 
-RUN apk add --no-cache pgbouncer
+RUN apk add --no-cache pgbouncer su-exec
 
-ENTRYPOINT ["pgbouncer"]
+ENTRYPOINT ["su-exec", "pgbouncer", "pgbouncer"]
